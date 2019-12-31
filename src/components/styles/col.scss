@@ -1,0 +1,75 @@
+@import "common/vars.scss";
+
+.#{$scope}-col {
+    float: left;
+    box-sizing: border-box;
+}
+
+@for $i from 0 through 24 {
+    .#{$scope}-col-#{$i} {
+        width: 1 / 24 * $i * 100%;
+    }
+
+    .#{$scope}-col-offset-#{$i} {
+        margin-left: 1 / 24 * $i * 100%;
+    }
+
+    .#{$scope}-col-pull-#{$i} {
+        position: relative;
+        right: 1 / 24 * $i * 100%;
+    }
+
+    .#{$scope}-col-push-#{$i} {
+        position: relative;
+        left: 1 / 24 * $i * 100%;
+    }
+}
+
+@each $breakpoint in $break-points {
+    @if nth($breakpoint, 2) == "xs" {
+        @media screen and (max-width: nth($breakpoint, 1)) {
+            @for $i from 0 through 24 {
+                .#{$scope}-col-#{nth($breakpoint, 2)}-#{$i} {
+                    width: 1 / 24 * $i * 100%;
+                }
+            
+                .#{$scope}-col-offset-#{nth($breakpoint, 2)}-#{$i} {
+                    margin-left: 1 / 24 * $i * 100%;
+                }
+            
+                .#{$scope}-col-pull-#{nth($breakpoint, 2)}-#{$i} {
+                    position: relative;
+                    right: 1 / 24 * $i * 100%;
+                }
+            
+                .#{$scope}-col-push-#{nth($breakpoint, 2)}-#{$i} {
+                    position: relative;
+                    left: 1 / 24 * $i * 100%;
+                }
+            }
+        }
+    } @else {
+        @media screen and (min-width: nth($breakpoint, 1)) {
+            @for $i from 0 through 24 {
+                .#{$scope}-col-#{nth($breakpoint, 2)}-#{$i} {
+                    width: 1 / 24 * $i * 100%;
+                }
+            
+                .#{$scope}-col-offset-#{nth($breakpoint, 2)}-#{$i} {
+                    margin-left: 1 / 24 * $i * 100%;
+                }
+            
+                .#{$scope}-col-pull-#{nth($breakpoint, 2)}-#{$i} {
+                    position: relative;
+                    right: 1 / 24 * $i * 100%;
+                }
+            
+                .#{$scope}-col-push-#{nth($breakpoint, 2)}-#{$i} {
+                    position: relative;
+                    left: 1 / 24 * $i * 100%;
+                }
+            }
+        }
+    }
+    
+}
