@@ -3,5 +3,5 @@
 .k-row {
     position: relative;
     box-sizing: border-box;
-    @include clearfix;
+    @include bfc-clearfix;
 }

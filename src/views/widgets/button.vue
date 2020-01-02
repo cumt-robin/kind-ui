@@ -1,8 +1,7 @@
 <template>
     <section>
-        <router-link to="/">首页</router-link>
-        <router-link to="/widgets">组件</router-link>
-        <div>这是首页</div>
+        <k-button>1</k-button>
+        <k-button>2</k-button>
     </section>
 </template>
 
