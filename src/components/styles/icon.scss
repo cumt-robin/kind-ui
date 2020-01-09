@@ -1,0 +1,57 @@
+@import "common/vars.scss";
+
+@font-face {
+    font-family: "iconfont";
+    src: $iconfont-eot; /* IE9*/
+    src: $iconfont-woff format('woff'), /* chrome, firefox */
+    $iconfont-woff2 format('woff2'), /* chrome, firefox */
+    $iconfont-ttf format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+}
+  
+[class^="k-icon-"],
+[class*=" k-icon-"] {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.k-icon-check-circle:before {
+    content: "\e77d";
+  }
+  
+  .k-icon-close-circle:before {
+    content: "\e77e";
+  }
+  
+  .k-icon-info-circle:before {
+    content: "\e77f";
+  }
+  
+  .k-icon-question-circle:before {
+    content: "\e782";
+  }
+  
+  .k-icon-reload:before {
+    content: "\e788";
+  }
+  
+  .k-icon-reloadtime:before {
+    content: "\e789";
+  }
+  
+  .k-icon-setting:before {
+    content: "\e78e";
+  }
+  
+  .k-icon-edit-square:before {
+    content: "\e791";
+  }
+  
+  .k-icon-close:before {
+    content: "\e7fc";
+  }
+  
+  
+

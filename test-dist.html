@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./dist/index.css">
     <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
-    <script src="./dist/vue-awesome-progress.min.js"></script>
+    <script src="./dist/kind-ui.0.1.0.min.js"></script>
     <title>vue-awesome-progress</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
     <script>
         new Vue({
             el: "#app",
-            template: '<vue-awesome-progress :percentage="40"></vue-awesome-progress>'
+            template: '<k-row :gutter="10"><k-col :span="12">1</k-col><k-col :span="12">2</k-col><k-dialog title="标题呀" :visible="true">哈哈</dialog></k-col></k-row>'
         })
     </script>
 </body>

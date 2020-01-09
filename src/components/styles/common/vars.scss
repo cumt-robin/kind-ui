@@ -1,2 +1,8 @@
 $scope: "k";
 $break-points: (576px "xs"), (768px "sm"), (992px "md"), (1200px "lg"), (1920px "xl");
+
+// global iconfont url
+$iconfont-eot: url('fonts/iconfont.eot');
+$iconfont-woff: url('fonts/iconfont.woff');
+$iconfont-woff2: url('fonts/iconfont.woff2');
+$iconfont-ttf: url('fonts/iconfont.ttf');

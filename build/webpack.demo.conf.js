@@ -19,7 +19,7 @@ module.exports = merge(baseWebpackConfig, {
     devtool: 'source-map',
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'vue-awesome-progress',
+            title: 'kind-ui',
             // 模板，支持ejs
             template: 'index.html',
             // 最终写入的目标文件

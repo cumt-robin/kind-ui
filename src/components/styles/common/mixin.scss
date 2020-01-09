@@ -1,3 +1,5 @@
+@import "vars.scss";
+
 @mixin clearfix {
     &::after {
         visibility: hidden;
@@ -17,5 +19,29 @@
     }
     &::after {
         clear: both;
+    }
+}
+
+@mixin b($blockname) {
+    .#{$scope}-#{$blockname} {
+        @content;
+    }
+}
+
+@mixin be($blockname, $element, $isRoot: false) {
+    @if $isRoot == true {
+        @at-root .#{$scope}-#{$blockname}__#{$element} {
+            @content;
+        }
+    } @else {
+        .#{$scope}-#{$blockname}__#{$element} {
+            @content;
+        }
+    }
+}
+
+@mixin bem($blockname, $element, $modifier) {
+    &.#{$scope}-#{$blockname}__#{$element}--#{$modifier} {
+        @content;
     }
 }

@@ -1,8 +1,7 @@
 <template>
     <i
-        class="iconfont"
         :style="{'fontSize': `${size}px`, 'color': color}"
-        :class="icon"
+        :class="ICON_PREFIX + icon"
         :title="title"
         @click="trigger('click')"
     >
@@ -11,6 +10,7 @@
 </template>
 
 <script>
+import { ICON_PREFIX } from "../../../config/index";
 export default {
     name: 'KIcon',
     props: {
@@ -26,6 +26,11 @@ export default {
         },
         title: {
             type: String
+        }
+    },
+    data() {
+        return {
+            ICON_PREFIX
         }
     },
     methods: {

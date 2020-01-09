@@ -2,8 +2,7 @@ const path = require("path")
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
-const packageJson = require('../package.json')
-const version = packageJson.version
+const components = require('../config/components.json')
 
 function resolvePath(dir) {
     return path.join(__dirname, "..", dir)
@@ -11,24 +10,14 @@ function resolvePath(dir) {
 
 const buildConfig = merge(baseWebpackConfig, {
     mode: 'production',
-    entry: {
-        'kind-ui': './src/components/index.js'
-    },
+    entry: components,
     output: {
         path: resolvePath('dist'),
         publicPath: '/',
-        filename: `[name].${version}.js`,
-        library: 'KindUI',
+        filename: '[name].js',
+        library: 'VueAwesomeProgress',
         libraryTarget: 'umd',
         umdNamedDefine: true
-    },
-    externals: {
-        vue: {
-            root: 'Vue',
-            commonjs: 'vue',
-            commonjs2: 'vue',
-            amd: 'vue'
-        }
     },
     devtool: false,
     plugins: [

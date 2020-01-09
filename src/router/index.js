@@ -26,12 +26,17 @@ const router = new Router({
             children: [
                 {
                     path: '',
-                    redirect: '/layout'
+                    redirect: 'layout'
                 },
                 {
-                    path: '/layout',
+                    path: 'layout',
                     component: () => import("@/views/widgets/layout.vue"),
                     meta: { name: '布局' }
+                },
+                {
+                    path: 'dialog',
+                    component: () => import("@/views/widgets/dialog.vue"),
+                    meta: { name: '对话框' }
                 }
             ]
         }

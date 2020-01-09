@@ -57,6 +57,13 @@ module.exports = {
                   'css-loader',
                   'sass-loader'
                 ]
+            },
+            {
+                test: /\.(woff|woff2|ttf|eot)$/,
+                loader: "file-loader",
+                options: {
+                    name: "[name].[ext]?[hash]"
+                }
             }
         ]
     },

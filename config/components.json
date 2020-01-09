@@ -1,0 +1,7 @@
+{
+    "button": "./src/components/button/index.js",
+    "col": "./src/components/col/index.js",
+    "dialog": "./src/components/dialog/index.js",
+    "icon": "./src/components/icon/index.js",
+    "row": "./src/components/row/index.js"
+}

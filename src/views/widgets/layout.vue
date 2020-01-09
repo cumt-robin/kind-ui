@@ -19,10 +19,10 @@
             <k-col :span="6" :xs="12" :sm="8" :md="6">
                 <div class="content">1</div>
             </k-col>
-            <k-col :span="6" :xs="12" :sm="8" :md="6">
+            <k-col :span="6" :xs="7" :sm="6" :md="6">
                 <div class="content">2</div>
             </k-col>
-            <k-col :span="6" :xs="12" :sm="8" :md="6">
+            <k-col :span="6" :xs="14" :sm="6" :md="6">
                 <div class="content">3</div>
             </k-col>
             <k-col :span="6" :xs="12" :sm="8" :md="6">

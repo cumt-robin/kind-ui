@@ -1,0 +1,99 @@
+@import "common/mixin.scss";
+
+@include b(modal) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    opacity: .5;
+}
+
+@include b(modal-enter) {
+    animation: modal-in .3s ease forwards;
+}
+
+@include b(modal-leave) {
+    animation: modal-out .3s ease forwards;
+}
+  
+@keyframes modal-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+    }
+}
+  
+@keyframes modal-out {
+    0% {
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@include b(dialog) {
+    position: relative;
+    width: 50%;
+    margin: 100px auto 0;
+    background-color: #fff;
+
+    @include be(dialog, wrapper, true) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    @include be(dialog, header) {
+        padding: 12px 20px;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    @include be(dialog, close) {
+        position: absolute;
+        top: 12px;
+        right: 20px;
+        padding: 0 6px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    @include be(dialog, body) {
+        padding: 12px 20px;
+    }
+}
+
+.dialog-fade-enter-active {
+    animation: dialog-fade-in .3s;
+}
+
+.dialog-fade-leave-active {
+    animation: dialog-fade-out .3s;
+}
+
+@keyframes dialog-fade-in {
+    0% {
+        transform: translate3d(0, -20px, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes dialog-fade-out {
+    0% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate3d(0, -20px, 0);
+        opacity: 0;
+    }
+}

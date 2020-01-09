@@ -3,12 +3,14 @@ import Row from "./row";
 import Col from "./col";
 import Button from "./button";
 import Icon from "./icon";
+import Dialog from "./dialog";
 
 const components = [
     Row,
     Col,
     Button,
-    Icon
+    Icon,
+    Dialog
 ]
 
 const install = function(Vue) {
@@ -26,5 +28,6 @@ export default {
     Row,
     Col,
     Button,
-    Icon
+    Icon,
+    Dialog
 }
