@@ -9,7 +9,8 @@
     "minifyjs": "cross-env NODE_ENV=production webpack --progress --config build/webpack.minify.conf.js",
     "postbuild": "npm run minifyjs && gulp buildscss",
     "build:demo": "cross-env NODE_ENV=production IS_DEMO=true webpack --progress --config build/webpack.demo.conf.js",
-    "analyze:build": "cross-env report=true npm run build"
+    "analyze:build": "cross-env report=true npm run build",
+    "open:umd": "http-server -o test-umd.html"
   },
   "keywords": [
     "kind-ui",
@@ -53,8 +54,10 @@
     "gulp-cssmin": "^0.2.0",
     "gulp-sass": "^4.0.2",
     "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.12.1",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.0",
+    "portfinder": "^1.0.25",
     "sass-loader": "^8.0.0",
     "vue-eslint-parser": "^7.0.0",
     "vue-loader": "^15.7.2",

@@ -14,7 +14,10 @@
     <script>
         new Vue({
             el: "#app",
-            template: '<k-row :gutter="10"><k-col :span="12">1</k-col><k-col :span="12">2</k-col><k-dialog title="标题呀" :visible="true">哈哈</dialog></k-col></k-row>'
+            template: '<k-row :gutter="10"><k-col :span="12">1</k-col><k-col :span="12">2</k-col><k-dialog title="标题呀" :visible.sync="isShowDialog">哈哈</dialog></k-col></k-row>',
+            data: {
+                isShowDialog: true
+            }
         })
     </script>
 </body>
