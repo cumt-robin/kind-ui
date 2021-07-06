@@ -9,7 +9,7 @@
                 <main class="k-dialog__body">
                     <slot></slot>
                 </main>
-                <div class="el-dialog__footer" v-if="$slots.footer">
+                <div class="k-dialog__footer" v-if="$slots.footer">
                     <slot name="footer"></slot>
                 </div>
             </div>
